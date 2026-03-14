@@ -1,11 +1,24 @@
 # WINULT - Windows Ultimate Tool
 
+```
+============================================================
+ WINULT | Windows Ultimate Tool
+ PC Health Check, Repair, and Malware-Safety Diagnostics
+============================================================
+```
+
 > Interactive Windows diagnostic & repair toolkit.  
 > SFC · DISM · CHKDSK · Defender · Drivers · SMART · Malware persistence. Fully logged, admin-safe.
 
 **Current version:** v2.7.0  
 **Platform:** Windows 10 / 11 (PowerShell 5.1+)  
 **Requires:** Administrator rights
+**Terms:** [TERMS.md](TERMS.md)
+
+## Download Latest
+
+- Latest source ZIP (main branch): [Download ZIP](https://github.com/yassine-el-B/PC_HealthCheck_And_Repair/archive/refs/heads/main.zip)
+- Repository: [PC_HealthCheck_And_Repair](https://github.com/yassine-el-B/PC_HealthCheck_And_Repair)
 
 ---
 
@@ -153,12 +166,9 @@ No personal files, documents, or passwords are read or saved. The log contains o
 
 ## License
 
-MIT License
+This project uses custom usage terms preventing from being taken down in the future.
 
-Copyright (c) 2026 Yassine El-B
+See [LICENSE](LICENSE).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
