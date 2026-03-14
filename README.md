@@ -9,9 +9,29 @@
 
 ---
 
+## Why use WINULT?
+
+- **Fixes slow PCs** - clears Windows Update cache, repairs corrupted system files with SFC + DISM
+- **Repairs corruption** - runs CHKDSK, SFC, and DISM in one go with actionable results
+- **Detects malware persistence** - audits non-Microsoft scheduled tasks and suspicious running services
+- **Generates full diagnostic logs** - every section timestamped and saved; stderr captured separately
+- **Safe for technicians** - prompts before every destructive action; auto restore point before repairs begin
+- **Portable** - single `.bat` file, runs from USB, no installation required
+
+---
+
+## Who is this for?
+
+- **IT technicians** who want a fast, reproducible diagnostic workflow
+- **PC repair shops** needing a one-click audit trail to show customers
+- **Power users** who maintain their own machines
+- **MSPs** looking for a lightweight, scriptable first-response toolkit
+
+---
+
 ## What it does
 
-WINULT runs a structured sequence of health checks and repairs on a Windows PC and writes a full diagnostic log. Everything is interactive — nothing destructive happens without a prompt first, and a system restore point is created automatically before any repairs begin.
+WINULT runs a structured sequence of health checks and repairs on a Windows PC and writes a full diagnostic log. Everything is interactive - nothing destructive happens without a prompt first, and a system restore point is created automatically before any repairs begin.
 
 ---
 
@@ -44,11 +64,11 @@ Choose at the menu or use one-key shortcuts:
 
 | Key | Profile | Sections included | Est. time |
 |-----|---------|-------------------|-----------|
-| 1 | Quick Check | SysInfo + Disk + Drivers + Quick Scan | ~20–30 min |
-| 2 | Full Maintenance | All sections + Full virus scan | ~1.5–3 hrs |
-| 3 | Critical Repair | SFC + DISM + Drivers + Malware + AV | ~1–2 hrs |
-| 4 | Virus/Malware | Malware persistence + Full virus scan | ~1–2 hrs |
-| 5 | Low-End Friendly | SysInfo + Disk + Drivers only | ~10–20 min |
+| 1 | Quick Check | SysInfo + Disk + Drivers + Quick Scan | ~20-30 min |
+| 2 | Full Maintenance | All sections + Full virus scan | ~1.5-3 hrs |
+| 3 | Critical Repair | SFC + DISM + Drivers + Malware + AV | ~1-2 hrs |
+| 4 | Virus/Malware | Malware persistence + Full virus scan | ~1-2 hrs |
+| 5 | Low-End Friendly | SysInfo + Disk + Drivers only | ~10-20 min |
 | M | Manual | Toggle individual sections ON/OFF | varies |
 
 ---
@@ -115,3 +135,30 @@ No personal files, documents, or passwords are read or saved. The log contains o
 
 ### v2.5.0
 - Initial public release
+
+---
+
+## Limitations
+
+- **Windows only** - not compatible with Linux or macOS
+- **No GUI** - runs entirely in the command prompt; no graphical interface
+- **CHKDSK only scans C:** - other volumes must be checked manually
+- **Defender scans only** - does not integrate with third-party antivirus tools
+- **Temperature readings depend on ACPI support** - some systems (especially VMs) report no sensors
+- **SSD wear data requires driver support** - NVMe/SATA controllers must expose SMART data to Windows
+- **Restore points require System Protection to be enabled** - may be off by default on some builds or blocked by Group Policy
+- **Malware persistence scan is heuristic** - flags suspicious entries for human review; not a replacement for a dedicated AV tool
+
+---
+
+## License
+
+MIT License
+
+Copyright (c) 2026 Yassine El-B
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
