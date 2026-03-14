@@ -56,9 +56,9 @@ Choose at the menu or use one-key shortcuts:
 ## Requirements
 
 - **Windows 10 or 11** (works on Server 2016+ with Storage module)
-- **PowerShell 5.1 or later** — detected automatically at startup
-- **Administrator rights** — script will refuse to run without elevation
-- Must be run from a **local drive or USB** — UNC/network paths are blocked
+- **PowerShell 5.1 or later** - detected automatically at startup
+- **Administrator rights** - script will refuse to run without elevation
+- Must be run from a **local drive or USB** - UNC/network paths are blocked
 
 ---
 
@@ -83,8 +83,8 @@ Logs\
 
 | File | Contents |
 |------|----------|
-| `TechLog_*.txt` | Full console output — everything shown on screen, timestamped per section |
-| `Errors_*.txt` | Stderr from SFC, DISM, CHKDSK, and Defender — useful for deep troubleshooting |
+| `TechLog_*.txt` | Full console output - everything shown on screen, timestamped per section |
+| `Errors_*.txt` | Stderr from SFC, DISM, CHKDSK, and Defender - useful for deep troubleshooting |
 
 ---
 
@@ -97,7 +97,7 @@ No personal files, documents, or passwords are read or saved. The log contains o
 ## Changelog
 
 ### v2.7.0
-- Added PowerShell 5.1+ version guard — aborts with a clear message on older PS
+- Added PowerShell 5.1+ version guard - aborts with a clear message on older PS
 - SFC result now parsed from `CBS.log`: distinguishes `PASS / REPAIRED / FAIL / WARN-REBOOT`
 - `Get-PhysicalDisk` wrapped in try/catch for compatibility with older Windows builds
 - `_MP_FOUND` Defender path sentinel initialised before loop; commented for clarity
@@ -106,11 +106,11 @@ No personal files, documents, or passwords are read or saved. The log contains o
 ### v2.6.0
 - Fixed UNC network share guard (original empty-string test never fired on `\\server\share` paths)
 - Replaced deprecated `wmic` with `Checkpoint-Computer` for restore point creation
-- Dynamic Defender platform path discovery — no longer hardcodes the version folder name
+- Dynamic Defender platform path discovery - no longer hardcodes the version folder name
 - SFC exit code corrected from `errorlevel 2` to `errorlevel 1`
 - Fixed extraneous `}` in thermal zone PowerShell command
 - `SUM_NETWORK` now reflects actual internet connectivity (was always `PASS`)
-- `SoftwareDistribution.bak` collision fix — removes old `.bak` before rename
+- `SoftwareDistribution.bak` collision fix - removes old `.bak` before rename
 - Stderr redirected to `ERRFILE` for SFC, DISM, CHKDSK, and Defender
 
 ### v2.5.0
