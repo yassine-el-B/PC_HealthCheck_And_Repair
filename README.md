@@ -166,9 +166,9 @@ No personal files, documents, or passwords are read or saved. The log contains o
 
 ## License
 
-This project uses custom usage terms preventing from being taken down in the future.
+This project is licensed under the MIT License, with additional ethical usage terms.
+See [LICENSE](LICENSE), [TERMS.md](TERMS.md) for more details.
 
-See [LICENSE](LICENSE).
 
 
 
