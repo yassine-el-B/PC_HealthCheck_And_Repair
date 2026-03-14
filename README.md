@@ -86,6 +86,65 @@ Choose at the menu or use one-key shortcuts:
 
 ---
 
+## How to Use
+
+First, download this repository and extract it to a local folder such as your Desktop. Do not run it from a network share, because WINULT blocks that on purpose.
+
+Then open `WINULT.bat` as **Administrator**. The script checks for admin rights and PowerShell before anything starts.
+
+When the main menu appears, choose the profile you want:
+
+- Use **1** for a fast health check
+- Use **2** if you want all sections enabled
+- Use **3** if you mainly want repair actions like SFC and DISM
+- Use **4** if you want to focus on malware checks and Defender scanning
+- Use **5** for a lighter run on low-end systems
+- Use **M** if you want to manually choose each section yourself
+
+After you pick a profile, WINULT shows a confirmation screen with every enabled and skipped section. Review it, then press **S** to start or **Q** to go back.
+
+During the run, some checks may ask for an extra choice. For example, CHKDSK lets you choose between an online scan, an offline repair on reboot, or skipping it. Network diagnostics can also offer an optional reset.
+
+When the script finishes, open the `Logs` folder next to `WINULT.bat`. You will find the full diagnostic log and the error log there.
+
+If you are not sure what a section does, use the profile presets first instead of Manual mode. The presets are the safest way to start using the tool.
+
+---
+
+## Menu Guide
+
+When WINULT starts, it shows a profile menu. Each key selects a predefined repair workflow:
+
+- **1 - Quick Check**: fast diagnostic pass for general health checks
+- **2 - Full Maintenance**: runs all sections, including the full Defender scan
+- **3 - Critical Repair**: focuses on repair tasks like SFC, DISM, drivers, and malware checks
+- **4 - Virus/Malware**: focuses on persistence checks and antivirus scanning
+- **5 - Low-End Friendly**: lighter run for slower machines
+- **M - Manual**: lets you turn each section on or off yourself
+- **Q - Quit**: exits without making changes
+
+If you choose **Manual**, the next screen shows every section with an `ON` or `OFF` status. Press the matching key to toggle a section:
+
+- `1-9` toggle the numbered checks
+- `T` toggles temperature checks
+- `B-E` toggle the advanced sections
+- `A` turns all sections on
+- `N` turns all sections off
+- `S` moves to the confirmation screen
+- `0` returns to the profile menu
+
+Before anything runs, WINULT shows a confirmation screen listing every enabled and skipped section. Press **S** to begin or **Q** to go back.
+
+Some sections then ask for an extra decision during runtime:
+
+- **CHKDSK** asks whether to run an online scan, schedule an offline repair, or skip
+- **Network** can optionally reset DNS, Winsock, and IP settings
+- **Virus Scan** uses the selected profile's scan mode, such as quick or full
+
+This keeps the tool technician-friendly: you can use a preset when you need speed, or fine-tune every step when you want full control.
+
+---
+
 ## Requirements
 
 - **Windows 10 or 11** (works on Server 2016+ with Storage module)
@@ -164,11 +223,23 @@ No personal files, documents, or passwords are read or saved. The log contains o
 
 ---
 
+## Support & Feedback
+
+- Found a bug? Open an issue on GitHub
+- Have a feature request? Let me know
+- Need help? Check the Menu Guide section above
+
+---
+
+## GitHub Topics
+
+`batch-script`, `windows-diagnostics`, `pc-repair`, `system-maintenance`, `sfc-dism-chkdsk`, `malware-detection`, `driver-diagnostics`, `disk-health`, `windows-admin-tools`, `windows-utilities`
+
+---
+
 ## License
 
-This project uses custom usage terms preventing from being taken down in the future.
-
-See [LICENSE](LICENSE).
-
+This project is licensed under the MIT License, with additional ethical usage terms.
+See [LICENSE](LICENSE), [TERMS.md](TERMS.md) for more details.
 
 
