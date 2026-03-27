@@ -1,7 +1,5 @@
 # WINULT Usage Terms
 
-Copyright (c) 2026 Yassine El-B
-
 ## Allowed
 - You may use this project for personal or professional PC maintenance.
 - You may copy and modify this project.
